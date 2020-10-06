@@ -1,0 +1,94 @@
+#Os simbolos (virgula) "," e (ponto) "." NÃO se comportam muito bem em uma lista
+#uper
+lista1 = ["\\","!","#","$","%","&","'","(",")","*","+","-","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Ç","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","ç","º","ª"]
+lista3 = ["+","-","x","X","/","º","ª"]
+print("|----------------------------------------------------------------------------------------|")
+print("|                                                                                        |")
+print("|                                Calculadora do Ruda                                     |")
+print("|                                                                                        |")
+print("|----------------------------------------------------------------------------------------|")
+print("|      Adição = + | Subtração = - | Multiplicação = x | Divisão = / | Elevação = º       |")
+print("|----------------------------------------------------------------------------------------|")
+numero1 = (input("|Digite o prímero número: "))
+while True:
+    if numero1 in lista1:
+        numero1 = (input("|Digite o prímero número: "))
+    elif numero1 == ",":
+        numero1 = (input("|Digite o prímero número: "))
+    elif numero1 == ".":
+        numero1 = (input("|Digite o prímero número: "))
+    else:
+        break
+simbolo = (input("|Digite o símbolo da operação matemática: "))
+while True:
+    if simbolo not in lista3:
+        print("|----------------------------------------------------------------------------------------|")
+        print("|      Adição = + | Subtração = - | Multiplicação = x | Divisão = / | Elevação = º       |")
+        print("|----------------------------------------------------------------------------------------|")
+        simbolo = (input("|Digite o símbolo da operação matemática: "))
+    else :
+        break
+numero2 = (input("|Digite o segundo número: "))
+while True:
+    if numero2 in lista1:
+        numero2 = (input("|Digite o segundo número: "))
+    elif numero2 == ",":
+        numero2 = (input("|Digite o segundo número: "))
+    elif numero2 == ".":
+        numero2 = (input("|Digite o segundo número: "))
+    elif simbolo == "+":
+        x = (float(numero1))
+        y = (float(numero2))
+        soma = (float(x + y))
+        print("|----------------------------------------------------------------------------------------|")
+        print("|O resultado da soma é %.2f" % soma)
+        print("|----------------------------------------------------------------------------------------|")
+        break
+    elif simbolo == "-":
+        x = (float(numero1))
+        y = (float(numero2))
+        subtracao = (float(x - y))
+        print("|----------------------------------------------------------------------------------------|")
+        print("|O resultado da subtração é %.2f" % subtracao)
+        print("|----------------------------------------------------------------------------------------|")
+        break
+    elif simbolo == "x":
+        x = (float(numero1))
+        y = (float(numero2))
+        multiplicacao = (float(x * y))
+        print("|----------------------------------------------------------------------------------------|")
+        print("| O resultado da multiplicação é %.2f" % multiplicacao)
+        print("|----------------------------------------------------------------------------------------|")
+        break
+    elif simbolo == "X":
+        x = (float(numero1))
+        y = (float(numero2))
+        multiplicacaoX = (float(x * y))
+        print("|----------------------------------------------------------------------------------------|")
+        print("| O resultado da multiplicação é %.2f" % multiplicacaoX)
+        print("|----------------------------------------------------------------------------------------|")
+        break
+    elif simbolo == "/":
+        x = (float(numero1))
+        y = (float(numero2))
+        divisao = (float(x / y))
+        print("|----------------------------------------------------------------------------------------|")
+        print("|O resultado da visão é %2.f" % divisao)
+        print("|----------------------------------------------------------------------------------------|")
+        break
+    elif simbolo == "º":
+        x = (float(numero1))
+        y = (float(numero2))
+        exponeciacao = (float(x ** y))
+        print("|----------------------------------------------------------------------------------------|")
+        print("| O resultado da exponeciação é %2.f" % exponeciacao)
+        print("|----------------------------------------------------------------------------------------|")
+        break
+    elif simbolo == "ª":
+        x = (float(numero1))
+        y = (float(numero2))
+        exponeciacaoX = (float(x ** y))
+        print("|----------------------------------------------------------------------------------------|")
+        print("|O resultado da exponenciação é %2.f" % exponeciacaoX)
+        print("|----------------------------------------------------------------------------------------|")
+        break
